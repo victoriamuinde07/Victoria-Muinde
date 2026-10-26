@@ -194,6 +194,14 @@
   .project h3{ font-size:clamp(1.4rem,2.6vw,1.75rem); font-weight:700; margin-bottom:10px; }
   .project p{ font-size:16.5px; margin-bottom:20px; }
   .project .tag-list{ margin-top:auto; }
+  .project-links{ display:flex; gap:10px; flex-wrap:wrap; }
+  .project-links a{ display:inline-block; margin-bottom:20px; padding:9px 20px; border:2px solid currentColor; border-radius:999px; font-weight:700; font-size:15px; text-decoration:none; color:inherit; transition:background .15s, color .15s; }
+  .project-links a:hover{ background:currentColor; }
+  .project-links a:hover span{ color:var(--hover-ink); }
+  .project-links a[href*="PASTE-"]{ display:none; }
+  .p-chat{ --hover-ink:#14275F; }
+  .p-site{ --hover-ink:#E9B94E; }
+  .p-track{ --hover-ink:#F2E6CC; }
   .p-chat{ grid-row:span 2; background:linear-gradient(160deg,#22398A,#14275F); color:#FFF4E2; border-bottom-left-radius:10px; }
   .p-chat p{ color:#C9D4F0; font-size:17.5px; }
   .p-chat h3{ font-size:clamp(1.7rem,3.4vw,2.3rem); }
@@ -437,6 +445,7 @@
         </svg>
         <h3>AI Customer Complaint Chatbot</h3>
         <p>My final-year project: a Python-based AI chatbot (NLTK/spaCy) built to handle customer complaints for a financial institution, so routine issues no longer need a trip to a physical bank branch. Tested with real users at the institution.</p>
+        <div class="project-links"><a href="https://www.linkedin.com/in/victoria-muinde-2b80a132a/" target="_blank" rel="noopener"><span>See it on LinkedIn</span></a></div>
         <div class="tag-list"><span class="chip">Python</span><span class="chip">NLTK</span><span class="chip">spaCy</span></div>
       </article>
 
@@ -448,6 +457,7 @@
         </svg>
         <h3>Spiseup Company Website</h3>
         <p>Designed and built the company website supporting Spiseup's online presence and customer-facing information.</p>
+        <div class="project-links"><a href="https://spiseup.co.ke" target="_blank" rel="noopener"><span>Visit website</span></a></div>
         <div class="tag-list"><span class="chip">Web Development</span></div>
       </article>
 
@@ -459,6 +469,7 @@
         </svg>
         <h3>AI-Powered Financial Tracker</h3>
         <p>Built a tool to support day-to-day tracking of business income, expenses, and financial decision-making at Spiseup.</p>
+        <div class="project-links"><a href="https://www.linkedin.com/in/victoria-muinde-2b80a132a/" target="_blank" rel="noopener"><span>See it on LinkedIn</span></a></div>
         <div class="tag-list"><span class="chip">Python</span><span class="chip">AI</span></div>
       </article>
     </div>
