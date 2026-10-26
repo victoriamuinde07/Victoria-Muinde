@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Victoria Muinde</title>
+<meta name="description" content="Victoria Muinde: business development, customer support and ICT specialist. Outbound sales, CRM, support and the tools businesses run on." />
+<meta name="theme-color" content="#101E45" />
+<meta property="og:title" content="Victoria Muinde" />
+<meta property="og:description" content="Business development, customer support and ICT specialist." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23E6B54A'/%3E%3C/svg%3E" />
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0A1430;
+    --bg-warm: #101E45;
+    --ink: #F6EEDB;
+    --ink-soft: #AEB9D1;
+    --line: #26365F;
+    --on-gold: #0A1430;
+
+    --sun: #E6B54A;
+    --sun-soft: rgba(230,181,74,.18);
+    --sun-ink: #F2CF7A;
+
+    --teal: #6C9BEA;
+    --teal-deep: #060E24;
+    --teal-soft: rgba(108,155,234,.17);
+    --teal-ink: #B3CDF7;
+
+    --rose: #E08F5F;
+    --rose-soft: rgba(224,143,95,.17);
+    --rose-ink: #F2BC9A;
+
+    --display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --body: 'Figtree', system-ui, sans-serif;
+    --maxw: 1040px;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; scroll-padding-top:76px; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--body); font-size:17px; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:var(--display); margin:0; letter-spacing:-0.02em; line-height:1.1; }
+  p{ margin:0; }
+  a{ color:inherit; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+  :focus-visible{ outline:3px solid var(--teal); outline-offset:3px; border-radius:6px; }
+  ::selection{ background:var(--sun-soft); }
+
+  .skip{ position:absolute; left:-999px; top:8px; background:var(--sun); color:var(--on-gold); padding:10px 16px; border-radius:8px; z-index:100; }
+  .skip:focus{ left:12px; }
+
+  /* ---------- NAV ---------- */
+  .nav{ position:sticky; top:0; z-index:50; background:rgba(10,20,48,0.88); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; padding-top:14px; padding-bottom:14px; position:relative; }
+  .brand{ font-family:var(--display); font-size:21px; font-weight:700; text-decoration:none; letter-spacing:-0.02em; display:flex; align-items:center; gap:10px; }
+  .brand::before{ content:''; width:14px; height:14px; border-radius:50%; background:var(--sun); box-shadow:0 0 0 4px var(--sun-soft); }
+  .nav-links{ display:flex; gap:6px; list-style:none; margin:0; padding:0; font-size:15px; font-weight:500; }
+  .nav-links a{ display:block; text-decoration:none; color:var(--ink-soft); padding:6px 14px; border-radius:999px; transition:background .15s, color .15s; }
+  .nav-links a:hover{ color:var(--ink); background:var(--bg-warm); }
+  .nav-links a.is-current{ color:var(--ink); background:var(--sun-soft); }
+  .menu-btn{ display:none; font:inherit; font-weight:600; font-size:15px; color:var(--ink); background:var(--bg-warm); border:0; padding:8px 16px; border-radius:999px; cursor:pointer; }
+  @media (max-width:720px){
+    .menu-btn{ display:block; }
+    .nav-links{ display:none; position:absolute; right:24px; top:100%; margin-top:8px; flex-direction:column; background:var(--bg); border:1px solid var(--line); border-radius:18px; padding:8px; min-width:180px; box-shadow:0 14px 30px rgba(0,0,0,.45); }
+    .nav-links.open{ display:flex; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{ position:relative; background:radial-gradient(circle at 82% 28%, rgba(230,181,74,.22), transparent 55%), var(--bg-warm); padding:72px 0 150px; overflow:hidden; }
+  .hero-grid{ display:grid; grid-template-columns:1.3fr 0.7fr; gap:40px; align-items:center; }
+  .status{ display:inline-flex; align-items:center; gap:10px; background:#14234A; border:1px solid var(--line); padding:7px 16px 7px 14px; border-radius:999px; font-size:14.5px; font-weight:600; margin-bottom:26px; }
+  .status .dot{ width:10px; height:10px; border-radius:50%; background:#2FA866; box-shadow:0 0 0 0 rgba(47,168,102,.5); animation:pulse 2.2s infinite; }
+  @keyframes pulse{ 0%{ box-shadow:0 0 0 0 rgba(47,168,102,.5); } 70%{ box-shadow:0 0 0 9px rgba(47,168,102,0); } 100%{ box-shadow:0 0 0 0 rgba(47,168,102,0); } }
+  .hero h1{ font-size:clamp(2.8rem,7.4vw,4.7rem); font-weight:800; letter-spacing:-0.035em; line-height:1; max-width:11ch; }
+  .role{ margin-top:18px; font-size:19px; color:var(--ink-soft); font-weight:500; }
+
+  .lane-area{ margin-top:34px; }
+  .lanes{ display:flex; flex-wrap:wrap; gap:10px; }
+  .lane-btn{
+    font-family:var(--display); font-weight:700; letter-spacing:-0.02em;
+    font-size:clamp(1.3rem,3.2vw,1.9rem); line-height:1;
+    padding:12px 22px 13px; border-radius:999px; cursor:pointer;
+    color:var(--ink); background:transparent; border:2px solid rgba(246,238,219,.28);
+    transition:background .25s, color .25s, border-color .25s, transform .2s;
+  }
+  .lane-btn:hover{ border-color:var(--ink); }
+  .lane-btn[aria-selected="true"]{ border-color:transparent; transform:translateY(-2px); }
+  .lane-sell[aria-selected="true"]{ background:var(--sun); color:var(--on-gold); }
+  .lane-support[aria-selected="true"]{ background:var(--teal); color:var(--on-gold); }
+  .lane-build[aria-selected="true"]{ background:var(--rose); color:var(--on-gold); }
+
+  .lane-panels{ margin-top:22px; max-width:50ch; }
+  .js .lane-panels{ display:grid; }
+  .lane-panel{ font-size:18px; color:var(--ink); }
+  .js .lane-panel{ grid-area:1/1; opacity:0; visibility:hidden; transform:translateY(6px); transition:opacity .35s, transform .35s, visibility .35s; }
+  .js .lane-panel.is-active{ opacity:1; visibility:visible; transform:none; }
+  .lane-panel + .lane-panel{ margin-top:12px; }
+  .js .lane-panel + .lane-panel{ margin-top:0; }
+
+  .hero-ctas{ display:flex; gap:12px; flex-wrap:wrap; margin-top:32px; }
+  .btn{ display:inline-block; padding:14px 26px; border-radius:999px; text-decoration:none; font-weight:700; font-size:16px; transition:transform .15s, box-shadow .15s, background .15s; }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-dark{ background:var(--sun); color:var(--on-gold); box-shadow:0 6px 0 rgba(230,181,74,.28); }
+  .btn-dark:hover{ box-shadow:0 8px 0 rgba(230,181,74,.28); }
+  .btn-line{ border:2px solid var(--ink); color:var(--ink); padding:12px 24px; }
+  .btn-line:hover{ background:rgba(246,238,219,.08); }
+
+  .sun{ position:relative; width:100%; max-width:330px; justify-self:center; aspect-ratio:1; }
+  .sun svg{ width:100%; height:100%; display:block; overflow:visible; }
+  .sun .rays{ transform-origin:150px 150px; animation:spin 70s linear infinite; }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+
+  .wave{ position:absolute; left:0; right:0; bottom:-1px; width:100%; height:90px; display:block; }
+
+  /* hero entrance: one orchestrated moment */
+  .hero .status, .hero h1, .hero .role, .hero .lane-area, .hero .hero-ctas, .hero .sun{ animation:rise .7s cubic-bezier(.2,.7,.2,1) both; }
+  .hero h1{ animation-delay:.08s; }
+  .hero .role{ animation-delay:.16s; }
+  .hero .lane-area{ animation-delay:.26s; }
+  .hero .hero-ctas{ animation-delay:.36s; }
+  .hero .sun{ animation-delay:.2s; }
+  @keyframes rise{ from{ opacity:0; transform:translateY(18px); } to{ opacity:1; transform:none; } }
+
+  @media (max-width:860px){
+    .hero{ padding:44px 0 130px; }
+    .hero-grid{ grid-template-columns:1fr; gap:28px; }
+    .sun{ max-width:200px; order:-1; justify-self:start; }
+    .hero h1{ max-width:none; }
+  }
+
+  /* ---------- SHARED SECTION BITS ---------- */
+  .section{ padding:clamp(60px,9vw,100px) 0; }
+  .section-title{ font-size:clamp(2rem,4.6vw,3rem); font-weight:700; margin-bottom:36px; }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:48px; align-items:start; }
+  .about .section-title{ margin-bottom:22px; }
+  .about-quote{ font-family:var(--display); font-size:clamp(1.3rem,2.6vw,1.65rem); font-weight:600; line-height:1.3; letter-spacing:-0.015em; color:var(--sun-ink); }
+  .about-quote svg{ display:block; width:140px; height:14px; margin-top:14px; }
+  .about-text p{ color:var(--ink-soft); font-size:18px; max-width:58ch; }
+  .about-text p + p{ margin-top:18px; }
+  @media (max-width:820px){ .about-grid{ grid-template-columns:1fr; gap:28px; } }
+
+  /* ---------- SKILLS ---------- */
+  .skills{ background:var(--bg-warm); }
+  .skills-grid{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  .skills-group{ background:var(--bg); border:1px solid var(--line); border-radius:28px; padding:28px; }
+  .skills-group h3{ font-size:20px; font-weight:700; margin-bottom:16px; display:flex; align-items:center; gap:12px; }
+  .skills-group h3::before{ content:''; width:12px; height:12px; border-radius:50%; background:var(--c); flex:none; }
+  .g-sell{ --c:var(--sun); --chip:var(--sun-soft); --chip-ink:var(--sun-ink); }
+  .g-support{ --c:var(--teal); --chip:var(--teal-soft); --chip-ink:var(--teal-ink); }
+  .g-build{ --c:var(--rose); --chip:var(--rose-soft); --chip-ink:var(--rose-ink); }
+  .tag-list{ display:flex; gap:8px; flex-wrap:wrap; }
+  .chip{ background:var(--chip); color:var(--chip-ink); padding:7px 15px; border-radius:999px; font-size:14.5px; font-weight:600; transition:transform .15s; }
+  .chip:hover{ transform:translateY(-2px) rotate(-1.5deg); }
+  @media (max-width:760px){ .skills-grid{ grid-template-columns:1fr; } .skills-group{ padding:24px; } }
+
+  /* ---------- EXPERIENCE ---------- */
+  .timeline{ list-style:none; margin:0; padding:0; }
+  .tl-item{ display:grid; grid-template-columns:170px 1fr; gap:0 28px; }
+  .tl-date{ font-size:15px; font-weight:600; color:var(--ink-soft); padding-top:4px; }
+  .tl-body{ position:relative; padding:0 0 44px 34px; border-left:2px solid var(--line); }
+  .tl-item:last-child .tl-body{ padding-bottom:0; border-left-color:transparent; }
+  .tl-body::before{ content:''; position:absolute; left:-10px; top:5px; width:18px; height:18px; border-radius:50%; background:var(--dot, var(--sun)); border:4px solid var(--bg); box-sizing:content-box; margin:-4px 0 0 -4px; }
+  .tl-item:last-child .tl-body::before{ left:-10px; }
+  .dot-all{ --dot:conic-gradient(var(--sun) 0 33%, var(--teal) 0 66%, var(--rose) 0); }
+  .dot-build{ --dot:var(--rose); }
+  .dot-sell{ --dot:var(--sun); }
+  .tl-role{ font-family:var(--display); font-size:23px; font-weight:700; letter-spacing:-0.015em; line-height:1.2; }
+  .tl-org{ font-size:16px; font-weight:600; color:var(--teal); margin:3px 0 12px; }
+  .tl-body ul{ margin:0; padding:0; list-style:none; color:var(--ink-soft); font-size:16.5px; }
+  .tl-body li{ position:relative; padding-left:22px; margin-bottom:8px; max-width:62ch; }
+  .tl-body li::before{ content:''; position:absolute; left:2px; top:.62em; width:8px; height:8px; border-radius:50%; background:var(--sun); }
+  @media (max-width:700px){
+    .tl-item{ grid-template-columns:1fr; }
+    .tl-date{ padding:0 0 6px 36px; }
+    .tl-body{ margin-top:-30px; padding-top:30px; }
+    .tl-body::before{ top:35px; }
+  }
+
+  /* ---------- PROJECTS ---------- */
+  .projects{ background:var(--bg-warm); }
+  .bento{ display:grid; grid-template-columns:1.15fr 1fr; gap:22px; }
+  .project{ border-radius:32px; padding:32px; display:flex; flex-direction:column; transition:transform .2s; }
+  .project:hover{ transform:translateY(-4px) rotate(-.4deg); }
+  .project .icon{ width:54px; height:54px; margin-bottom:22px; }
+  .project h3{ font-size:clamp(1.4rem,2.6vw,1.75rem); font-weight:700; margin-bottom:10px; }
+  .project p{ font-size:16.5px; margin-bottom:20px; }
+  .project .tag-list{ margin-top:auto; }
+  .p-chat{ grid-row:span 2; background:linear-gradient(160deg,#22398A,#14275F); color:#FFF4E2; border-bottom-left-radius:10px; }
+  .p-chat p{ color:#C9D4F0; font-size:17.5px; }
+  .p-chat h3{ font-size:clamp(1.7rem,3.4vw,2.3rem); }
+  .p-chat .chip{ background:rgba(255,244,226,.14); color:#FFF4E2; }
+  .p-site{ background:linear-gradient(145deg,#F4CE6C,#D9A23A); color:#0A1430; }
+  .p-site p{ color:#3A2A08; }
+  .p-site .chip{ background:rgba(10,20,48,.14); color:#0A1430; }
+  .p-track{ background:#F2E6CC; color:#0A1430; border-top-right-radius:10px; }
+  .p-track p{ color:#3A3B52; }
+  .p-track .chip{ background:rgba(10,20,48,.1); color:#0A1430; }
+  @media (max-width:820px){ .bento{ grid-template-columns:1fr; } .p-chat{ grid-row:auto; } .project{ padding:26px; } }
+
+  /* ---------- CONTACT ---------- */
+  .contact{ position:relative; background:var(--teal-deep); color:#FFF4E2; overflow:hidden; padding:clamp(70px,10vw,120px) 0 clamp(90px,12vw,140px); }
+  .contact::after{
+    content:''; position:absolute; width:380px; height:380px; border-radius:50%; background:radial-gradient(circle at 35% 30%, #F8DB8A, #D9A23A 70%);
+    right:-90px; bottom:-230px;
+    box-shadow:0 0 0 30px rgba(230,181,74,.2), 0 0 0 70px rgba(230,181,74,.1);
+  }
+  .contact .wrap{ position:relative; z-index:1; }
+  .contact h2{ font-size:clamp(2.4rem,6vw,4rem); font-weight:800; letter-spacing:-0.03em; }
+  .contact .lede{ margin:16px 0 34px; font-size:19px; color:#B9C4DD; max-width:40ch; }
+  .contact-links{ display:flex; gap:12px; flex-wrap:wrap; }
+  .btn-sun{ background:var(--sun); color:var(--on-gold); }
+  .btn-sun:hover{ background:#F2CC6E; }
+  .btn-ghost{ border:2px solid rgba(255,244,226,.45); color:#FFF4E2; padding:12px 24px; }
+  .btn-ghost:hover{ border-color:#FFF4E2; background:rgba(255,244,226,.08); }
+
+  footer{ background:var(--teal-deep); color:#8E9BBA; padding:0 0 34px; font-size:14.5px; position:relative; z-index:1; }
+  footer .wrap{ border-top:1px solid rgba(255,244,226,.15); padding-top:22px; }
+
+  @media (prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ animation:none !important; transition:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#about">Skip to content</a>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">Victoria Muinde</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="status"><span class="dot" aria-hidden="true"></span>Available for work</p>
+      <h1>Hi, I'm Victoria Muinde</h1>
+      <p class="role">Business development, customer support and ICT specialist</p>
+
+      <div class="lane-area">
+        <div class="lanes" role="tablist" aria-label="What I do">
+          <button class="lane-btn lane-sell" role="tab" id="tab-sell" aria-controls="panel-sell" aria-selected="true">I sell.</button>
+          <button class="lane-btn lane-support" role="tab" id="tab-support" aria-controls="panel-support" aria-selected="false" tabindex="-1">I support.</button>
+          <button class="lane-btn lane-build" role="tab" id="tab-build" aria-controls="panel-build" aria-selected="false" tabindex="-1">I build.</button>
+        </div>
+        <div class="lane-panels">
+          <p class="lane-panel is-active" role="tabpanel" id="panel-sell" aria-labelledby="tab-sell">I grow customer bases through outbound sales and disciplined CRM follow-up. At Spiseup, that took us from zero to 100+ active SME accounts.</p>
+          <p class="lane-panel" role="tabpanel" id="panel-support" aria-labelledby="tab-support">I keep customers supported across phone, chat, and ticketing systems, tracking every inquiry in HubSpot and Zendesk until it's resolved.</p>
+          <p class="lane-panel" role="tabpanel" id="panel-build" aria-labelledby="tab-build">I build the technical tools businesses run on: websites, CRMs, and AI-powered tools like a financial tracker and a customer complaints chatbot.</p>
+        </div>
+      </div>
+
+      <div class="hero-ctas">
+        <a class="btn btn-dark" href="mailto:victoriamuinde07@gmail.com">Email me</a>
+        <a class="btn btn-line" href="#projects">See my work</a>
+      </div>
+    </div>
+
+    <div class="sun" aria-hidden="true">
+      <svg viewBox="0 0 300 300">
+        <defs><radialGradient id="gold" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#F8DB8A"/><stop offset="1" stop-color="#D9A23A"/></radialGradient></defs>
+        <g class="rays" stroke="#E6B54A" stroke-width="9" stroke-linecap="round">
+          <line x1="150" y1="6" x2="150" y2="34"/>
+          <line x1="150" y1="266" x2="150" y2="294"/>
+          <line x1="6" y1="150" x2="34" y2="150"/>
+          <line x1="266" y1="150" x2="294" y2="150"/>
+          <line x1="48" y1="48" x2="68" y2="68"/>
+          <line x1="232" y1="232" x2="252" y2="252"/>
+          <line x1="252" y1="48" x2="232" y2="68"/>
+          <line x1="68" y1="232" x2="48" y2="252"/>
+          <line x1="77" y1="14" x2="87" y2="39" opacity=".55"/>
+          <line x1="223" y1="261" x2="213" y2="286" opacity=".55"/>
+          <line x1="223" y1="14" x2="213" y2="39" opacity=".55"/>
+          <line x1="77" y1="261" x2="87" y2="286" opacity=".55"/>
+          <line x1="14" y1="77" x2="39" y2="87" opacity=".55"/>
+          <line x1="261" y1="223" x2="286" y2="213" opacity=".55"/>
+          <line x1="14" y1="223" x2="39" y2="213" opacity=".55"/>
+          <line x1="261" y1="77" x2="286" y2="87" opacity=".55"/>
+        </g>
+        <circle cx="150" cy="150" r="98" fill="url(#gold)"/>
+        <circle cx="150" cy="150" r="98" fill="none" stroke="#0A1430" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" opacity=".35"/>
+        <text x="150" y="176" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="76" letter-spacing="-3" fill="#0A1430">VM</text>
+      </svg>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,50 C180,95 360,0 540,38 C720,76 900,100 1080,52 C1230,14 1340,30 1440,56 L1440,90 L0,90 Z" fill="#0A1430"/>
+  </svg>
+</header>
+
+<main>
+<section id="about" class="section about">
+  <div class="wrap about-grid">
+    <div>
+      <h2 class="section-title">About me</h2>
+      <p class="about-quote">What connects all of it is the same discipline: clear communication, consistent follow-through, and picking up new tools fast.
+        <svg viewBox="0 0 140 14" aria-hidden="true"><path d="M2,8 C14,1 22,1 34,7 S56,13 68,7 S92,1 104,7 S126,13 138,6" fill="none" stroke="#E6B54A" stroke-width="4" stroke-linecap="round"/></svg>
+      </p>
+    </div>
+    <div class="about-text">
+      <p>I'm a Bachelor of Technology graduate in Information Communication Technology, currently working as Co-Founder at Spiseup, where I lead outbound sales, manage customer support, and build the technical tools the business runs on, including our CRM setup, company website, and an AI-powered financial tracker.</p>
+      <p>My background spans more than one lane: I've installed and configured fiber internet connections (GPON/EPON) as an ICT technician, taught robotics and web/mobile development to students, and built an AI chatbot that handles customer complaints for a financial institution.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section skills">
+  <div class="wrap">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skills-group g-sell">
+        <h3>Sales &amp; Business Development</h3>
+        <div class="tag-list">
+          <span class="chip">Outbound Cold Calling</span>
+          <span class="chip">Lead Qualification</span>
+          <span class="chip">Appointment Setting</span>
+          <span class="chip">Negotiation &amp; Closing</span>
+          <span class="chip">Referral Generation</span>
+        </div>
+      </div>
+      <div class="skills-group g-support">
+        <h3>Customer Support &amp; CRM</h3>
+        <div class="tag-list">
+          <span class="chip">HubSpot CRM and our company's custom CRM</span>
+          <span class="chip">Zendesk</span>
+          <span class="chip">Google Calendar Management</span>
+          <span class="chip">Multi-Channel Support</span>
+        </div>
+      </div>
+      <div class="skills-group g-sell">
+        <h3>Marketing</h3>
+        <div class="tag-list">
+          <span class="chip">Social Media Management</span>
+          <span class="chip">Technical SEO</span>
+          <span class="chip">Content &amp; Branding</span>
+        </div>
+      </div>
+      <div class="skills-group g-build">
+        <h3>ICT &amp; Software Development</h3>
+        <div class="tag-list">
+          <span class="chip">Python</span>
+          <span class="chip">Java</span>
+          <span class="chip">C++</span>
+          <span class="chip">Web Development</span>
+          <span class="chip">Mobile App Development</span>
+          <span class="chip">AI / NLP (NLTK, spaCy)</span>
+          <span class="chip">Fiber Installation (GPON/EPON)</span>
+          <span class="chip">Robotics Programming</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="wrap">
+    <h2 class="section-title">Experience</h2>
+    <ul class="timeline">
+      <li class="tl-item">
+        <div class="tl-date">Sep 2025 to Present</div>
+        <div class="tl-body dot-all">
+          <div class="tl-role">Co-Founder</div>
+          <div class="tl-org">Spiseup, Kitengela &amp; Mombasa</div>
+          <ul>
+            <li>Grew client base from zero to 100+ active SME accounts through outbound cold approaches, securing 200+ new paying accounts within 3–6 months.</li>
+            <li>Manage HubSpot CRM and Zendesk support tickets, keeping every lead and customer inquiry tracked to resolution.</li>
+            <li>Built and maintain the company website, set up the CRM system, and developed an AI-powered financial tracker for business income/expense tracking.</li>
+            <li>Run social media and apply technical SEO to grow visibility and customer acquisition.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-date">May 2025 to Nov 2025</div>
+        <div class="tl-body dot-build">
+          <div class="tl-role">ICT Technician</div>
+          <div class="tl-org">GTECH-Zuku, Mombasa</div>
+          <ul>
+            <li>Installed and configured fiber internet connections using GPON and EPON technology.</li>
+            <li>Provided first-level technical support, troubleshooting hardware, software, and wireless communication systems.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-date">Mar 2024 to Aug 2024</div>
+        <div class="tl-body dot-build">
+          <div class="tl-role">Tech Trainer &amp; Programmer</div>
+          <div class="tl-org">TechKidz Africa, Mombasa</div>
+          <ul>
+            <li>Taught website development, robotics programming, and mobile application development to students.</li>
+            <li>Mentored students through hands-on coding, robotics, and 3D printing projects.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-date">Earlier</div>
+        <div class="tl-body dot-sell">
+          <div class="tl-role">Field Sales Agent</div>
+          <div class="tl-org">Taras (Bolt)</div>
+          <ul>
+            <li>Conducted in-person, street-level pitching to onboard new customers to Bolt's ride-hailing service.</li>
+            <li>Built rapid trust and handled objections in a fast-paced, target-driven environment.</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects" class="section projects">
+  <div class="wrap">
+    <h2 class="section-title">Projects</h2>
+    <div class="bento">
+      <article class="project p-chat">
+        <svg class="icon" viewBox="0 0 54 54" aria-hidden="true">
+          <path d="M8 10h28a6 6 0 0 1 6 6v12a6 6 0 0 1-6 6H20l-9 8v-8H8a6 6 0 0 1-6-6V16a6 6 0 0 1 6-6z" fill="#E6B54A"/>
+          <path d="M26 24h20a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6h-2v7l-8-7H26a6 6 0 0 1-6-6V30a6 6 0 0 1 6-6z" fill="#FFF4E2" opacity=".9"/>
+        </svg>
+        <h3>AI Customer Complaint Chatbot</h3>
+        <p>My final-year project: a Python-based AI chatbot (NLTK/spaCy) built to handle customer complaints for a financial institution, so routine issues no longer need a trip to a physical bank branch. Tested with real users at the institution.</p>
+        <div class="tag-list"><span class="chip">Python</span><span class="chip">NLTK</span><span class="chip">spaCy</span></div>
+      </article>
+
+      <article class="project p-site">
+        <svg class="icon" viewBox="0 0 54 54" aria-hidden="true">
+          <rect x="3" y="8" width="48" height="38" rx="8" fill="#0A1430"/>
+          <circle cx="12" cy="17" r="2.5" fill="#E6B54A"/><circle cx="20" cy="17" r="2.5" fill="#FFF4E2"/><circle cx="28" cy="17" r="2.5" fill="#FFF4E2"/>
+          <rect x="10" y="26" width="22" height="4" rx="2" fill="#FFF4E2"/><rect x="10" y="34" width="34" height="4" rx="2" fill="#FFF4E2" opacity=".5"/>
+        </svg>
+        <h3>Spiseup Company Website</h3>
+        <p>Designed and built the company website supporting Spiseup's online presence and customer-facing information.</p>
+        <div class="tag-list"><span class="chip">Web Development</span></div>
+      </article>
+
+      <article class="project p-track">
+        <svg class="icon" viewBox="0 0 54 54" aria-hidden="true">
+          <rect x="6" y="28" width="9" height="20" rx="4" fill="#C9733F"/>
+          <rect x="22" y="16" width="9" height="32" rx="4" fill="#C9733F"/>
+          <rect x="38" y="6" width="9" height="42" rx="4" fill="#7A3E1D"/>
+        </svg>
+        <h3>AI-Powered Financial Tracker</h3>
+        <p>Built a tool to support day-to-day tracking of business income, expenses, and financial decision-making at Spiseup.</p>
+        <div class="tag-list"><span class="chip">Python</span><span class="chip">AI</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <p class="lede">Let's connect and discuss how I can contribute to your team's success.</p>
+    <div class="contact-links">
+      <a class="btn btn-sun" href="mailto:victoriamuinde07@gmail.com">victoriamuinde07@gmail.com</a>
+      <a class="btn btn-ghost" href="tel:+254793781276">+254 793 781 276</a>
+      <a class="btn btn-ghost" href="https://linkedin.com/in/victoria-muinde-2b80a132a" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Victoria Muinde, Nairobi, Kenya</div>
+</footer>
+
+<script>
+(function(){
+  /* mobile menu */
+  var btn = document.querySelector('.menu-btn');
+  var links = document.getElementById('nav-links');
+  btn.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', function(e){
+    if (e.target.tagName === 'A'){ links.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+  });
+
+  /* highlight current section in nav */
+  var navLinks = [].slice.call(document.querySelectorAll('.nav-links a'));
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){
+          navLinks.forEach(function(a){ a.classList.toggle('is-current', a.getAttribute('href') === '#' + en.target.id); });
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['about','skills','experience','projects','contact'].forEach(function(id){
+      var el = document.getElementById(id); if (el) io.observe(el);
+    });
+  }
+
+  /* "I sell. I support. I build." switcher */
+  var tabs = [].slice.call(document.querySelectorAll('.lane-btn'));
+  var panels = [].slice.call(document.querySelectorAll('.lane-panel'));
+  var area = document.querySelector('.lane-area');
+  var current = 0, timer = null, userPicked = false;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function show(n, focus){
+    current = n;
+    tabs.forEach(function(t, k){
+      var on = k === n;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      panels[k].classList.toggle('is-active', on);
+      if (on && focus) t.focus();
+    });
+  }
+  function start(){ if (!reduce && !userPicked && !timer){ timer = setInterval(function(){ show((current + 1) % tabs.length); }, 5200); } }
+  function stop(){ clearInterval(timer); timer = null; }
+
+  tabs.forEach(function(t, k){
+    t.addEventListener('click', function(){ userPicked = true; stop(); show(k); });
+    t.addEventListener('keydown', function(e){
+      var n = null;
+      if (e.key === 'ArrowRight') n = (k + 1) % tabs.length;
+      if (e.key === 'ArrowLeft') n = (k - 1 + tabs.length) % tabs.length;
+      if (n !== null){ e.preventDefault(); userPicked = true; stop(); show(n, true); }
+    });
+  });
+  area.addEventListener('mouseenter', stop);
+  area.addEventListener('mouseleave', start);
+  area.addEventListener('focusin', stop);
+  area.addEventListener('focusout', start);
+  start();
+})();
+</script>
+</body>
+</html>
